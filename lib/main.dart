@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-main() => runApp(ExpensesApp());
+main() => runApp(const ExpensesApp());
 
 class ExpensesApp  extends StatelessWidget {
   const ExpensesApp ({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage()
     );
   }
@@ -18,8 +18,11 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Versão inicial')
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Despesas Pessoais'),
+      ),
+      body: const Center(child: Text('Versão Inicial')),
     );
   }
 }
